@@ -1,1 +1,28 @@
-/* empty file */
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  line-height: 1.6;
+}
+
+.alphabet-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
