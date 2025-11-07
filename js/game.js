@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const alphabetName = params.get('alphabet');
 
-fetch('data/alphabets.json')
+fetch('data/PhoneticAlphabets.json')
   .then(res => res.json())
   .then(data => {
     const alphabet = data.find(a => a.Name === alphabetName);

@@ -1,4 +1,4 @@
-fetch('data/alphabets.json')
+fetch('data/PhoneticAlphabets.json')
   .then(response => response.json())
   .then(alphabets => {
     const container = document.getElementById('alphabet-list');
