@@ -1,3 +1,5 @@
+@import url('colors.css');
+
 @font-face {
   font-family: 'Manrope';
   src: url('../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
@@ -6,27 +8,27 @@
 }
 
 :root {
-  --background: #FFF;
-  --text: #000;
-  --card-background: #F3F3F3;
-  --border: #AAA;
-  --text-placeholder: #aaa;
+  --background: var(--color-bg-light);
+  --foreground: var(--color-text-light);
+  --card-background: var(--color-card-bg-light);
+  --border: var(--color-border-light);
+  --text-placeholder: var(--color-text-placeholder-light);
   --border-thickness: 1px;
 }
 
 [data-theme="dark"] {
-  --background: #282828;
-  --text: #DEDEDE;
-  --card-background: #202020;
-  --border: #505050;
-  --text-placeholder: #555;
+  --background: var(--color-bg-dark);
+  --foreground: var(--color-text-dark);
+  --card-background: var(--color-card-bg-dark);
+  --border: var(--color-border-dark);
+  --text-placeholder: var(--color-text-placeholder-dark);
 }
 
 body {
   margin: auto;
   line-height: 1.6;
   background: var(--background);
-  color: var(--text);
+  color: var(--foreground);
   font-family: 'Manrope';
   font-weight: 100;
   transition: 0.3s;
@@ -63,7 +65,7 @@ input {
   border-radius: 0px;
   border-color: var(--border);
   background-color: var(--background);
-  color: var(--text);
+  color: var(--foreground);
   padding: 0.5rem 1rem;
   font-size: 16px;
   text-transform: uppercase;
