@@ -1,11 +1,20 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 :root {
   --bg: #fff;
   --text: #000;
+  --card-background: #eee;
 }
 
 [data-theme="dark"] {
   --bg: #121212;
   --text: #eee;
+  --card-background: #202020;
 }
 
 body {
@@ -14,15 +23,31 @@ body {
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
-  font-family: sans-serif;
+  font-family: 'Manrope';
+  font-weight: 100;
   transition: 0.3s;
+}
+
+/* Add the image as a separate pseudo-element */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('../img/foxhound-dd.png') center/contain no-repeat;
+  transform: translate(-50%, -50%);
+  opacity: 0.15; /* adjust this for how visible you want it */
+  z-index: -1;   /* makes it stay behind the content */
+  pointer-events: none; /* makes it ignore mouse clicks */
 }
 
 h1 {
   text-transform: uppercase;
 }
 
-.alphabet-card {
+.card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
@@ -31,6 +56,7 @@ h1 {
 }
 .card {
   border: 1px solid #ccc;
+  background-color: var(--card-background);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;

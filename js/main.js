@@ -5,7 +5,7 @@ fetch('data/PhoneticAlphabets.json')
 
     alphabets.forEach(alpha => {
       const card = document.createElement('div');
-      card.classList.add('alphabet-card');
+      card.classList.add('card');
 
       const name = document.createElement('h2');
       name.textContent = alpha.FullName;
