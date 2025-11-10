@@ -1,0 +1,19 @@
+#alphabet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.practice {
+  flex: 2;
+}
+
+.time-trial {
+  flex: 1;
+}
