@@ -13,17 +13,24 @@ fetch('data/PhoneticAlphabets.json')
       const desc = document.createElement('p');
       desc.textContent = alpha.Description;
 
-      const practicebtn = document.createElement('a');
-      practicebtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}`;
-      practicebtn.textContent = 'Letter Spelling';
-      practicebtn.classList.add('btn');
+      const letterSpellingRow = document.createElement('div');
+      letterSpellingRow.classList.add('button-row');
 
-      const timetrialbtn = document.createElement('a');
-      timetrialbtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}`;
-      timetrialbtn.textContent = 'Time Trial';
-      timetrialbtn.classList.add('btn');
+      const practiceBtn = document.createElement('a');
+      practiceBtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=practice`;
+      practiceBtn.textContent = 'Letter Spelling';
+      practiceBtn.classList.add('btn');
+      practiceBtn.classList.add('practice');
 
-      card.append(name, desc, practicebtn, timetrialbtn);
+      const timeTrialBtn = document.createElement('a');
+      timeTrialBtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=time-trial`;
+      timeTrialBtn.textContent = 'Time Trial';
+      timeTrialBtn.classList.add('btn');
+      timeTrialBtn.classList.add('time-trial');
+
+      letterSpellingRow.append(practiceBtn, timeTrialBtn);
+
+      card.append(name, desc, letterSpellingRow);
       container.appendChild(card);
     });
   });
