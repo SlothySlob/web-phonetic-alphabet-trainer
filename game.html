@@ -6,23 +6,26 @@
   <title id="title">Phonetic Trainer</title>
   <link rel="icon" type="image/x-icon" href="foxhound-dd.ico">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme-checkbox.css">
+  <link rel="stylesheet" href="css/game.css">
 </head>
 
 <body>
-  <a href="index.html" class="btn">Back</a>
-  <h1 id="alphabet-name"></h1>
-  <div id="game-wrapper">
-    <div id="game"></div>
-    <div id="instructions">
-      <div class="card">
-        <p>
-          Type out the code word for the presented sign.
-        </p>
-        <p>
-          After you've finished, you can <b>press enter</b> or <b>click on SUBMIT</b>.
-        </p>
-      </div>
+  <div id="top-bar">
+    <div class="content">
+      <a href="index.html" class="btn">Back</a>
+      <p>THEME</p>
+      <input id="theme-toggle" class="theme-checkbox" type="checkbox" />
     </div>
+  </div>
+
+  <div class="content">
+    <h1 id="alphabet-name"></h1>
+    <div id="game-wrapper">
+      <div id="game"></div>
+      <div id="instructions"></div>
+    </div>
+    <div id="feedback"></div>
   </div>
 
   <script src="js/game.js"></script>
