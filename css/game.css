@@ -1,3 +1,15 @@
+@import url('colors.css');
+
+:root {
+  --foreground-correct: var(--color-text-correct);
+  --foreground-incorrect: var(--color-text-incorrect);
+}
+
+[data-theme="dark"] {
+  --foreground-correct: var(--color-text-correct);
+  --foreground-incorrect: var(--color-text-incorrect);
+}
+
 #game-wrapper {
   display: flex;
   gap: 1rem;
@@ -62,4 +74,46 @@
   font-weight: 600;
   line-height: 0;
   margin: auto;
+}
+
+#feedback {
+  font-weight: 600;
+  font-size: 38px;
+  text-align: center;
+  min-height: 78px;
+}
+
+.correct {
+  color: var(--foreground-correct);
+}
+
+.incorrect {
+  color: var(--foreground-incorrect);
+}
+
+#cheat-sheet {
+  padding: 1rem;
+  width: stretch;
+  border: var(--border-thickness) solid var(--border);
+  background-color: var(--card-background);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  column-count: 5;
+  column-gap: 0.4rem;
+}
+
+#cheat-sheet div {
+  break-inside: avoid;
+  padding: 0.1rem 0;
+}
+
+@media (max-width: 800px) {
+  #cheat-sheet {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  #cheat-sheet {
+    column-count: 1;
+  }
 }

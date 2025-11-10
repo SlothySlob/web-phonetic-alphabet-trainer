@@ -55,6 +55,19 @@ fetch('data/PhoneticAlphabets.json')
           <p>After you've finished, you can <b>press Enter</b> or <b>click Submit</b>.</p>
         </div>
       `;
+      
+      const listDiv = document.getElementById('list');
+      listDiv.innerHTML = '';
+
+      const cheatSheetDiv = document.createElement('div');
+      cheatSheetDiv.id='cheat-sheet';
+
+      alphabet.ListOfLetters.forEach(item => {
+        const pair = document.createElement('div');
+        pair.textContent = `${item.Letter} — ${item.Codename}`;
+        cheatSheetDiv.append(pair);
+      });
+      listDiv.append(cheatSheetDiv);
     }
     else if (gameMode === 'time-trial') {
       instructionsDiv.innerHTML = `
@@ -91,16 +104,20 @@ fetch('data/PhoneticAlphabets.json')
       const { Letter } = letters[index];
       letter.textContent = `${Letter}`;
       input.value = '';
-      feedback.textContent = '';
+      feedback.innerHTML = '';
       input.focus();
     }
 
     submitBtn.onclick = () => {
+      feedback.innerHTML = '';
+      feedback.classList.remove('correct', 'incorrect');
       const { Codename } = letters[index];
       if (input.value.trim().toLowerCase() === Codename.toLowerCase()) {
-        feedback.textContent = '✅ Correct!';
+        feedback.classList.add('correct');
+        feedback.textContent = `Correct!`;
       } else {
-        feedback.textContent = `❌ It's ${Codename}`;
+        feedback.classList.add('incorrect');
+        feedback.textContent = `Incorrect! It's ${Codename}`;
       }
 
       index = (index + 1) % letters.length;
