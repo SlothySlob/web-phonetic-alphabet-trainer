@@ -23,16 +23,25 @@ fetch('data/PhoneticAlphabets.json')
     const letter = document.createElement('p');
     letter.classList.add('letter');
 
+    const inputDiv = document.createElement('div');
+    inputDiv.classList.add('input-wrapper');
+
     const input = document.createElement('input');
+    input.type = 'text';
+    input.autocomplete = 'off';
+    input.placeholder = 'Enter code word';
+    input.spellcheck = false;
 
     const button = document.createElement('a');
     button.classList.add('btn');
+
+    inputDiv.append(input, button);
 
     // const feedback = document.createElement('p');
 
     button.textContent = 'Submit';
 
-    card.append(letter, input, button);
+    card.append(letter, inputDiv);
 
     gameDiv.append(card);
 
