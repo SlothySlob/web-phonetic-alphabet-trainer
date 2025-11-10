@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const alphabetName = params.get('alphabet');
+const gameMode = params.get('mode');
 
 fetch('data/PhoneticAlphabets.json')
   .then(res => res.json())
@@ -32,37 +33,79 @@ fetch('data/PhoneticAlphabets.json')
     input.placeholder = 'Enter code word';
     input.spellcheck = false;
 
-    const button = document.createElement('a');
-    button.classList.add('btn');
+    const submitBtn = document.createElement('a');
+    submitBtn.classList.add('btn');
+    submitBtn.textContent = 'Submit';
 
-    inputDiv.append(input, button);
-
-    // const feedback = document.createElement('p');
-
-    button.textContent = 'Submit';
-
+    inputDiv.append(input, submitBtn);
     card.append(letter, inputDiv);
-
     gameDiv.append(card);
+
+    const feedback = document.createElement('p');
+    const feedbackDiv = document.getElementById('feedback');
+    feedbackDiv.append(feedback);
+
+    const instructionsDiv = document.getElementById('instructions');
+    instructionsDiv.innerHTML = '';
+
+    if (gameMode === 'practice') {
+      instructionsDiv.innerHTML = `
+        <div class="card">
+          <p>Type out the code word for the presented sign.</p>
+          <p>After you've finished, you can <b>press Enter</b> or <b>click Submit</b>.</p>
+        </div>
+      `;
+    }
+    else if (gameMode === 'time-trial') {
+      instructionsDiv.innerHTML = `
+        <div class="card">
+          <p>The moment you <b>click into</b> the input box, <b>the timer will start</b>.</p>
+          <p>You can <b>press Enter</b> or <b>click Submit</b> to submit your code word.</p>
+        </div>
+      `;
+    }
+
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        submitBtn.click();
+      }
+    });
 
     function next() {
       const { Letter } = letters[index];
       letter.textContent = `${Letter}`;
       input.value = '';
-      // feedback.textContent = '';
+      feedback.textContent = '';
     }
 
-    button.onclick = () => {
+    function nextRandom() {
+      let newIndex;
+
+      do {
+        newIndex = Math.floor(Math.random() * letters.length);
+      } while (newIndex === index && letters.length > 1);
+
+      index = newIndex;
+
+      const { Letter } = letters[index];
+      letter.textContent = `${Letter}`;
+      input.value = '';
+      feedback.textContent = '';
+      input.focus();
+    }
+
+    submitBtn.onclick = () => {
       const { Codename } = letters[index];
-      // if (input.value.trim().toLowerCase() === Codename.toLowerCase()) {
-      //   feedback.textContent = '✅ Correct!';
-      // } else {
-      //   feedback.textContent = `❌ It's ${Codename}`;
-      // }
+      if (input.value.trim().toLowerCase() === Codename.toLowerCase()) {
+        feedback.textContent = '✅ Correct!';
+      } else {
+        feedback.textContent = `❌ It's ${Codename}`;
+      }
 
       index = (index + 1) % letters.length;
-      setTimeout(next, 1000);
+      setTimeout(nextRandom, 1000);
     };
 
-    next();
+    nextRandom();
   });
