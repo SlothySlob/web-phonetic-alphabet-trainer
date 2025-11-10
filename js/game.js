@@ -22,7 +22,10 @@ fetch('data/PhoneticAlphabets.json')
 
     const question = document.createElement('p');
     const input = document.createElement('input');
-    const button = document.createElement('button');
+    
+    const button = document.createElement('a');
+    button.classList.add('btn');
+
     const feedback = document.createElement('p');
 
     button.textContent = 'Submit';

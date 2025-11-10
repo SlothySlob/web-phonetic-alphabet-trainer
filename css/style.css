@@ -18,6 +18,10 @@ body {
   transition: 0.3s;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 .alphabet-card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -32,9 +36,6 @@ body {
   margin-bottom: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-
-
 .btn {
   display: inline-block;
   margin-top: 0.5rem;
