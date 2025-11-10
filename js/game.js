@@ -11,23 +11,29 @@ fetch('data/PhoneticAlphabets.json')
     }
 
     document.getElementById('title').textContent = alphabet.FullName;
-    document.getElementById('description').textContent = alphabet.Description;
+    document.getElementById('alphabet-name').textContent = alphabet.FullName;
 
     const gameDiv = document.getElementById('game');
     let index = 0;
     const letters = alphabet.ListOfLetters;
+
+    const card = document.createElement('div');
+    card.classList.add('card');
 
     const question = document.createElement('p');
     const input = document.createElement('input');
     const button = document.createElement('button');
     const feedback = document.createElement('p');
 
-    button.textContent = 'Check';
-    gameDiv.append(question, input, button, feedback);
+    button.textContent = 'Submit';
+
+    card.append(question, input, button);
+
+    gameDiv.append(card, feedback);
 
     function next() {
       const { Letter } = letters[index];
-      question.textContent = `What is the code word for: ${Letter}?`;
+      question.textContent = `${Letter}`;
       input.value = '';
       feedback.textContent = '';
     }

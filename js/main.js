@@ -13,12 +13,17 @@ fetch('data/PhoneticAlphabets.json')
       const desc = document.createElement('p');
       desc.textContent = alpha.Description;
 
-      const btn = document.createElement('a');
-      btn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}`;
-      btn.textContent = 'Start Training';
-      btn.classList.add('btn');
+      const practicebtn = document.createElement('a');
+      practicebtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}`;
+      practicebtn.textContent = 'Letter Spelling';
+      practicebtn.classList.add('btn');
 
-      card.append(name, desc, btn);
+      const timetrialbtn = document.createElement('a');
+      timetrialbtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}`;
+      timetrialbtn.textContent = 'Time Trial';
+      timetrialbtn.classList.add('btn');
+
+      card.append(name, desc, practicebtn, timetrialbtn);
       container.appendChild(card);
     });
   });

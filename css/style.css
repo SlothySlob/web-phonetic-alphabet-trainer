@@ -1,8 +1,21 @@
+:root {
+  --bg: #fff;
+  --text: #000;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+}
+
 body {
-  font-family: sans-serif;
   max-width: 600px;
   margin: 2rem auto;
   line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  transition: 0.3s;
 }
 
 .alphabet-card {
@@ -12,6 +25,15 @@ body {
   margin-bottom: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
 
 .btn {
   display: inline-block;
