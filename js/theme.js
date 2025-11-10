@@ -1,22 +1,21 @@
-// const toggle = document.getElementById('theme-toggle');
-// const currentTheme = localStorage.getItem('theme') || 'light';
-// document.documentElement.setAttribute('data-theme', currentTheme);
-
-// toggle.textContent = currentTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
-
-// toggle.addEventListener('click', () => {
-//   const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-//   document.documentElement.setAttribute('data-theme', newTheme);
-//   localStorage.setItem('theme', newTheme);
-//   toggle.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
-// });
-
 const toggle = document.getElementById('theme-toggle');
-const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+// Determine the initial theme
+const savedTheme = localStorage.getItem('theme');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+// Apply it to <html>
 document.documentElement.setAttribute('data-theme', theme);
 
-toggle.addEventListener('click', () => {
-  const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-});
+// Make the checkbox reflect the current theme
+if (toggle) {
+  toggle.checked = theme === 'dark';
+
+  // Listen for checkbox changes
+  toggle.addEventListener('change', () => {
+    const newTheme = toggle.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
