@@ -20,34 +20,36 @@ fetch('data/PhoneticAlphabets.json')
     const card = document.createElement('div');
     card.classList.add('card');
 
-    const question = document.createElement('p');
+    const letter = document.createElement('p');
+    letter.classList.add('letter');
+
     const input = document.createElement('input');
-    
+
     const button = document.createElement('a');
     button.classList.add('btn');
 
-    const feedback = document.createElement('p');
+    // const feedback = document.createElement('p');
 
     button.textContent = 'Submit';
 
-    card.append(question, input, button);
+    card.append(letter, input, button);
 
-    gameDiv.append(card, feedback);
+    gameDiv.append(card);
 
     function next() {
       const { Letter } = letters[index];
-      question.textContent = `${Letter}`;
+      letter.textContent = `${Letter}`;
       input.value = '';
-      feedback.textContent = '';
+      // feedback.textContent = '';
     }
 
     button.onclick = () => {
       const { Codename } = letters[index];
-      if (input.value.trim().toLowerCase() === Codename.toLowerCase()) {
-        feedback.textContent = '✅ Correct!';
-      } else {
-        feedback.textContent = `❌ It's ${Codename}`;
-      }
+      // if (input.value.trim().toLowerCase() === Codename.toLowerCase()) {
+      //   feedback.textContent = '✅ Correct!';
+      // } else {
+      //   feedback.textContent = `❌ It's ${Codename}`;
+      // }
 
       index = (index + 1) % letters.length;
       setTimeout(next, 1000);
