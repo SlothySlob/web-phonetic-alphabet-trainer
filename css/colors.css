@@ -1,0 +1,22 @@
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #282828;
+
+  --color-text-light: #000000;
+  --color-text-dark: #DEDEDE;
+
+  --color-text-placeholder-light:#AAA;
+  --color-text-placeholder-dark:#555;
+
+  --color-card-bg-light: #F3F3F3;
+  --color-card-bg-dark: #202020;
+
+  --color-border-light: #AAA;
+  --color-border-dark: #505050;
+
+  --color-primary: #007acc;
+  --color-primary-hover: #005fa3;
+
+  --color-text-correct: #28a745;
+  --color-text-incorrect: #dc3545;
+}
