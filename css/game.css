@@ -1,0 +1,65 @@
+#game-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 1200px;
+}
+
+#game {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#game .card {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: stretch;
+  flex-direction: row;
+}
+
+.input-wrapper input {
+  flex: 2;
+}
+
+.input-wrapper button {
+  flex: 1;
+}
+
+#instructions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#instructions .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  #game-wrapper {
+    flex-direction: column;
+  }
+
+  #game,
+  #instructions {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.letter {
+  font-size: 84px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 0;
+  margin: auto;
+}
