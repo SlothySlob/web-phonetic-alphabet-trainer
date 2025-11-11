@@ -96,7 +96,7 @@
   width: stretch;
   border: var(--border-thickness) solid var(--border);
   background-color: var(--card-background);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   column-count: 5;
   column-gap: 0.4rem;
 }
@@ -116,4 +116,44 @@
   #cheat-sheet {
     column-count: 1;
   }
+}
+
+#time-trial-wrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+  justify-items: center;
+  gap: 1rem;
+}
+
+/* The main bar with cycles + timer */
+#time-trial-wrapper .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Manrope';
+  font-size: 24px;
+  padding: 1rem;
+  border: var(--border-thickness) solid var(--border);
+  background-color: var(--card-background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Columns behave responsively */
+#time-trial-wrapper .card p {
+  margin: 0;
+  text-align: center;
+  min-width: 6ch; /* stabilizes timer width */
+  transition: all 0.05s ease-out;
+}
+
+/* Button row */
+#time-trial-options {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 1rem;
 }

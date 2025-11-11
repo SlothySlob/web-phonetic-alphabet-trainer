@@ -17,13 +17,13 @@ fetch('data/PhoneticAlphabets.json')
       letterSpellingRow.classList.add('button-row');
 
       const practiceBtn = document.createElement('a');
-      practiceBtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=practice`;
+      practiceBtn.href = `letter-spelling.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=practice`;
       practiceBtn.textContent = 'Letter Spelling';
       practiceBtn.classList.add('btn');
       practiceBtn.classList.add('practice');
 
       const timeTrialBtn = document.createElement('a');
-      timeTrialBtn.href = `game.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=time-trial`;
+      timeTrialBtn.href = `letter-spelling.html?alphabet=${encodeURIComponent(alpha.Name)}&mode=time-trial`;
       timeTrialBtn.textContent = 'Time Trial';
       timeTrialBtn.classList.add('btn');
       timeTrialBtn.classList.add('time-trial');

@@ -90,14 +90,16 @@ input:focus {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   margin: auto;
+  gap: 1rem;
 }
 
 #top-bar .content {
-  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
-  gap: 1rem;
   align-items: center;
 }
 
