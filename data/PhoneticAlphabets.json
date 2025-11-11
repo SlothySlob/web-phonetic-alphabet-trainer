@@ -64,5 +64,41 @@
       { "Letter": "Y", "Codename": "Yoke" },
       { "Letter": "Z", "Codename": "Zebra" }
     ]
+  },
+  {
+    "Name": "SLO",
+    "FullName": "Slovenian phonetic alphabet",
+    "Description": "[HARDCODED] In the handbook for radioamateurs on page 48, you'll find the \" Slovenska tablica črkovanja \". If you want to practice it, go for it",
+    "ListOfLetters": [
+      { "Letter": "A", "Codename": "Ankaran" },
+      { "Letter": "B", "Codename": "Bled" },
+      { "Letter": "C", "Codename": "Celje" },
+      { "Letter": "Č", "Codename": "Čatež" },
+      { "Letter": "D", "Codename": "Drava" },
+      { "Letter": "E", "Codename": "Evropa" },
+      { "Letter": "F", "Codename": "Fala" },
+      { "Letter": "G", "Codename": "Gorica" },
+      { "Letter": "H", "Codename": "Hrastnik" },
+      { "Letter": "I", "Codename": "Izola" },
+      { "Letter": "J", "Codename": "Jadran" },
+      { "Letter": "K", "Codename": "Kamnik" },
+      { "Letter": "L", "Codename": "Ljubljana" },
+      { "Letter": "M", "Codename": "Maribor" },
+      { "Letter": "N", "Codename": "Nanos" },
+      { "Letter": "O", "Codename": "Ormož" },
+      { "Letter": "P", "Codename": "Piran" },
+      { "Letter": "Q", "Codename": "Queen" },
+      { "Letter": "R", "Codename": "Ravne" },
+      { "Letter": "S", "Codename": "Soča" },
+      { "Letter": "Š", "Codename": "Šmarje" },
+      { "Letter": "T", "Codename": "Triglav" },
+      { "Letter": "U", "Codename": "Unec" },
+      { "Letter": "V", "Codename": "Velenje" },
+      { "Letter": "W", "Codename": "Dvojni v" },
+      { "Letter": "X", "Codename": "Iks" },
+      { "Letter": "Y", "Codename": "Ipsilon" },
+      { "Letter": "Z", "Codename": "Zalog" },
+      { "Letter": "Ž", "Codename": "Žalec" }
+    ]
   }
 ]
