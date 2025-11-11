@@ -120,8 +120,20 @@ input:focus {
   border-radius: 0px;
   text-transform: uppercase;
   font-weight: 300;
+  cursor: pointer;
+}
+
+#top-bar .btn {
+  background-color:transparent;
+  color: var(--foreground);
+  padding: 1rem 1rem;
+  font-weight: 100;
 }
 
 .btn:hover {
   background: #005fa3;
+}
+
+#top-bar .btn:hover {
+  background-color:rgba(0,0,0,0.3);
 }
