@@ -25,8 +25,11 @@ The contents of the page is generated based on the [PhoneticAlphabets.json](data
 Here the user can select which alphabet to practice, by selecting either the name of the practice type or it's time trial version.
 
 ## Letter Spelling page
-
+   
 The contents of the page are generated based on the game type selected on the home page. On the top bar, the user will have an option to return back to the home page at any moment.
+
+> [!TIP]
+> The game mode is not case sensitive, ignores spaces and special characters. This was done specifically for exanples as for example "X-ray"
 
 ### Game type
 
