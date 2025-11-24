@@ -24,6 +24,11 @@
   --text-placeholder: var(--color-text-placeholder-dark);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: auto;
   line-height: 1.6;
@@ -32,6 +37,8 @@ body {
   font-family: 'Manrope';
   font-weight: 100;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 body::before {
@@ -103,6 +110,10 @@ input:focus {
   align-items: center;
 }
 
+#page-content {
+  flex: 1;
+}
+
 .card {
   border: var(--border-thickness) solid var(--border);
   background-color: var(--card-background);
@@ -124,7 +135,7 @@ input:focus {
 }
 
 #top-bar .btn {
-  background-color:transparent;
+  background-color: transparent;
   color: var(--foreground);
   padding: 1rem 1rem;
   font-weight: 100;
@@ -135,5 +146,5 @@ input:focus {
 }
 
 #top-bar .btn:hover {
-  background-color:rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
