@@ -2,7 +2,7 @@
   {
     "Name": "NATO",
     "FullName": "NATO Phonetic Alphabet",
-    "Description": "[HARDCODED] The NATO / ICAO / International phonetic alphabet is a set of code words assigned to the letters of the English alphabet to ensure clarity in oral communication, especially over radio or telephone. It is widely used in military, aviation, and maritime contexts to prevent misunderstandings due to similar-sounding letters.",
+    "Description": "[HARDCODED] The NATO / ICAO / ITU / IMO or simply International phonetic alphabet is a set of code words assigned to the letters of the English alphabet to ensure clarity in oral communication, especially over radio or telephone. It is widely used in military, aviation, and maritime contexts to prevent misunderstandings due to similar-sounding letters.",
     "ListOfLetters": [
       { "Letter": "A", "Codename": "Alfa" },
       { "Letter": "B", "Codename": "Bravo" },
@@ -33,36 +33,37 @@
     ]
   },
   {
-    "Name": "Able Baker",
-    "FullName": "Able Baker Phonetic Alphabet",
-    "Description": "[HARDCODED] The Able Baker phonetic alphabet was used by the U.S. military and Allied forces before the adoption of the NATO version in 1956. It served a similar purpose, ensuring clear radio communication by assigning distinct words to each letter of the alphabet.",
-    "ListOfLetters": [
-      { "Letter": "A", "Codename": "Able" },
-      { "Letter": "B", "Codename": "Baker" },
-      { "Letter": "C", "Codename": "Charlie" },
-      { "Letter": "D", "Codename": "Dog" },
-      { "Letter": "E", "Codename": "Easy" },
-      { "Letter": "F", "Codename": "Fox" },
-      { "Letter": "G", "Codename": "George" },
-      { "Letter": "H", "Codename": "How" },
-      { "Letter": "I", "Codename": "Item" },
-      { "Letter": "J", "Codename": "Jig" },
-      { "Letter": "K", "Codename": "King" },
-      { "Letter": "L", "Codename": "Love" },
-      { "Letter": "M", "Codename": "Mike" },
-      { "Letter": "N", "Codename": "Nan" },
-      { "Letter": "O", "Codename": "Oboe" },
-      { "Letter": "P", "Codename": "Peter" },
-      { "Letter": "Q", "Codename": "Queen" },
-      { "Letter": "R", "Codename": "Roger" },
-      { "Letter": "S", "Codename": "Sugar" },
-      { "Letter": "T", "Codename": "Tare" },
-      { "Letter": "U", "Codename": "Uncle" },
-      { "Letter": "V", "Codename": "Victor" },
-      { "Letter": "W", "Codename": "William" },
-      { "Letter": "X", "Codename": "X-ray" },
-      { "Letter": "Y", "Codename": "Yoke" },
-      { "Letter": "Z", "Codename": "Zebra" }
+    "Name": "NATONumbers",
+    "FullName": "NATO Phonetic Numbers",
+    "Description": "[HARDCODED] The NATO / ICAO number pronunciation system is used internationally in aviation and military communication to ensure clear transmission of digits over radio.",
+    "ListOfNumbers": [
+      { "Letter": "0", "Codename": "Zero" },
+      { "Letter": "1", "Codename": "Wun" },
+      { "Letter": "2", "Codename": "Too" },
+      { "Letter": "3", "Codename": "Tree" },
+      { "Letter": "4", "Codename": "Fower" },
+      { "Letter": "5", "Codename": "Fife" },
+      { "Letter": "6", "Codename": "Six" },
+      { "Letter": "7", "Codename": "Seven" },
+      { "Letter": "8", "Codename": "Eight" },
+      { "Letter": "9", "Codename": "Niner" }
+    ]
+  },
+  {
+    "Name": "ITUNumbers",
+    "FullName": "ITU / IMO Maritime Number System",
+    "Description": "[HARDCODED] The ITU maritime radiotelephone number pronunciation system is used in naval, marine, and GMDSS radio communication and differs significantly from NATO/ICAO.",
+    "ListOfNumbers": [
+      { "Number": "0", "Codename": "Nadazero" },
+      { "Number": "1", "Codename": "Unaone" },
+      { "Number": "2", "Codename": "Bissotwo" },
+      { "Number": "3", "Codename": "Terrathree" },
+      { "Number": "4", "Codename": "Katefour" },
+      { "Number": "5", "Codename": "Pantafive" },
+      { "Number": "6", "Codename": "Soxisix" },
+      { "Number": "7", "Codename": "Seteseven" },
+      { "Number": "8", "Codename": "Oktoeight" },
+      { "Number": "9", "Codename": "Novenine" }
     ]
   },
   {
@@ -99,6 +100,56 @@
       { "Letter": "Y", "Codename": "Ipsilon" },
       { "Letter": "Z", "Codename": "Zalog" },
       { "Letter": "Ž", "Codename": "Žalec" }
+    ]
+  },
+  {
+    "Name": "SLONumbers",
+    "FullName": "NATO Phonetic Numbers",
+    "Description": "[HARDCODED] The NATO / ICAO number pronunciation system is used internationally in aviation and military communication to ensure clear transmission of digits over radio.",
+    "ListOfNumbers": [
+      { "Letter": "0", "Codename": "Nič" },
+      { "Letter": "1", "Codename": "Ena" },
+      { "Letter": "2", "Codename": "Dva" },
+      { "Letter": "3", "Codename": "Tri" },
+      { "Letter": "4", "Codename": "Štiri" },
+      { "Letter": "5", "Codename": "Pet" },
+      { "Letter": "6", "Codename": "Šest" },
+      { "Letter": "7", "Codename": "Sedem" },
+      { "Letter": "8", "Codename": "Osem" },
+      { "Letter": "9", "Codename": "Devet" }
+    ]
+  },
+  {
+    "Name": "Able Baker",
+    "FullName": "Able Baker Phonetic Alphabet",
+    "Description": "[HARDCODED] The Able Baker phonetic alphabet was used by the U.S. military and Allied forces before the adoption of the NATO version in 1956. It served a similar purpose, ensuring clear radio communication by assigning distinct words to each letter of the alphabet.",
+    "ListOfLetters": [
+      { "Letter": "A", "Codename": "Able" },
+      { "Letter": "B", "Codename": "Baker" },
+      { "Letter": "C", "Codename": "Charlie" },
+      { "Letter": "D", "Codename": "Dog" },
+      { "Letter": "E", "Codename": "Easy" },
+      { "Letter": "F", "Codename": "Fox" },
+      { "Letter": "G", "Codename": "George" },
+      { "Letter": "H", "Codename": "How" },
+      { "Letter": "I", "Codename": "Item" },
+      { "Letter": "J", "Codename": "Jig" },
+      { "Letter": "K", "Codename": "King" },
+      { "Letter": "L", "Codename": "Love" },
+      { "Letter": "M", "Codename": "Mike" },
+      { "Letter": "N", "Codename": "Nan" },
+      { "Letter": "O", "Codename": "Oboe" },
+      { "Letter": "P", "Codename": "Peter" },
+      { "Letter": "Q", "Codename": "Queen" },
+      { "Letter": "R", "Codename": "Roger" },
+      { "Letter": "S", "Codename": "Sugar" },
+      { "Letter": "T", "Codename": "Tare" },
+      { "Letter": "U", "Codename": "Uncle" },
+      { "Letter": "V", "Codename": "Victor" },
+      { "Letter": "W", "Codename": "William" },
+      { "Letter": "X", "Codename": "X-ray" },
+      { "Letter": "Y", "Codename": "Yoke" },
+      { "Letter": "Z", "Codename": "Zebra" }
     ]
   },
   {
