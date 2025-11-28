@@ -36,7 +36,7 @@
     "Name": "NATONumbers",
     "FullName": "NATO Phonetic Numbers",
     "Description": "[HARDCODED] The NATO / ICAO number pronunciation system is used internationally in aviation and military communication to ensure clear transmission of digits over radio.",
-    "ListOfNumbers": [
+    "ListOfLetters": [
       { "Letter": "0", "Codename": "Zero" },
       { "Letter": "1", "Codename": "Wun" },
       { "Letter": "2", "Codename": "Too" },
@@ -53,7 +53,7 @@
     "Name": "ITUNumbers",
     "FullName": "ITU / IMO Maritime Number System",
     "Description": "[HARDCODED] The ITU maritime radiotelephone number pronunciation system is used in naval, marine, and GMDSS radio communication and differs significantly from NATO/ICAO.",
-    "ListOfNumbers": [
+    "ListOfLetters": [
       { "Number": "0", "Codename": "Nadazero" },
       { "Number": "1", "Codename": "Unaone" },
       { "Number": "2", "Codename": "Bissotwo" },
@@ -106,7 +106,7 @@
     "Name": "SLONumbers",
     "FullName": "NATO Phonetic Numbers",
     "Description": "[HARDCODED] The NATO / ICAO number pronunciation system is used internationally in aviation and military communication to ensure clear transmission of digits over radio.",
-    "ListOfNumbers": [
+    "ListOfLetters": [
       { "Letter": "0", "Codename": "Nič" },
       { "Letter": "1", "Codename": "Ena" },
       { "Letter": "2", "Codename": "Dva" },
