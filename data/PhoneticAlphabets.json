@@ -54,16 +54,16 @@
     "FullName": "ITU / IMO Maritime Number System",
     "Description": "[HARDCODED] The ITU maritime radiotelephone number pronunciation system is used in naval, marine, and GMDSS radio communication and differs significantly from NATO/ICAO.",
     "ListOfLetters": [
-      { "Number": "0", "Codename": "Nadazero" },
-      { "Number": "1", "Codename": "Unaone" },
-      { "Number": "2", "Codename": "Bissotwo" },
-      { "Number": "3", "Codename": "Terrathree" },
-      { "Number": "4", "Codename": "Katefour" },
-      { "Number": "5", "Codename": "Pantafive" },
-      { "Number": "6", "Codename": "Soxisix" },
-      { "Number": "7", "Codename": "Seteseven" },
-      { "Number": "8", "Codename": "Oktoeight" },
-      { "Number": "9", "Codename": "Novenine" }
+      { "Letter": "0", "Codename": "Nadazero" },
+      { "Letter": "1", "Codename": "Unaone" },
+      { "Letter": "2", "Codename": "Bissotwo" },
+      { "Letter": "3", "Codename": "Terrathree" },
+      { "Letter": "4", "Codename": "Katefour" },
+      { "Letter": "5", "Codename": "Pantafive" },
+      { "Letter": "6", "Codename": "Soxisix" },
+      { "Letter": "7", "Codename": "Seteseven" },
+      { "Letter": "8", "Codename": "Oktoeight" },
+      { "Letter": "9", "Codename": "Novenine" }
     ]
   },
   {
